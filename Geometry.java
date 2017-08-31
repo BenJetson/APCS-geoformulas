@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class Geometry here.
+ * Computes various geometric formulas based on given values.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ben Godfrey 
+ * @version 30 AUG 2017
  */
 public class Geometry 
 {
-    
+
     public static double triangleArea(double base, double height) 
     {
         double area = base * height / 2.0;
@@ -23,6 +23,43 @@ public class Geometry
     public static double sphereVolume(double radius) 
     {
         return 4.0 / 3.0 * Math.PI * Math.pow(radius, 3);
+    }
+    
+    public static double parallelogramArea(double base, double side) {
+        return rectangleArea(base, side);
+    }
+    
+    public static double trapezoidArea(double sideA, double sideB, double height) {
+        return (sideA + sideB) / 2.0 * height;
+    }
+    
+    public static double rectPrismVolume(double length, double width, double height) {
+        return length * width * height; 
+    }
+    
+    public static double coneVolume(double radius, double height) {
+        return Math.PI * Math.pow(radius, 2) * (height / 3.0);
+    }
+    
+    public static double rectPrismSurfaceArea(double length, double width, double height) {
+        return (2.0 * length * width) + (2.0 * length * height) + (2.0 * width * height);
+    }
+    
+    public static double sphereSurfaceArea(double radius) {
+        return 4.0 * Math.PI * Math.pow(radius, 2);
+    }
+    
+    public static double pythagorean(double a, double b) {
+        return Math.pow((Math.pow(a, 2) * Math.pow(b, 2)), (1.0 / 2.0));
+    }
+    
+    public static double distance(double x1, double y1, double x2, double y2) {
+        return Math.pow((Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2)), 
+                        (1.0 / 2.0));
+    }
+    
+    public static double slope(double x1, double y1, double x2, double y2) {
+        return (y1 - y2) / (x1 - x2);
     }
     
     public static void main(String[] args) 
