@@ -15,6 +15,12 @@ public class Geometry
         return area;
     }
     
+    public static double triangleArea(double a, double b, double c) {
+        double s = (a + b + c) / 2.0;
+        
+        return Math.pow((s * (s - a) * (s - b) * (s - c)), (1 / 2));
+    }
+    
     public static double rectangleArea(double length, double width) 
     {
         return length * width;
