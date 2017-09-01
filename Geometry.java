@@ -192,6 +192,6 @@ public class Geometry
         System.out.printf("sphereVolume(8.5) = %f%n", sphereVolume(8.5));
         System.out.printf("trapezoidArea(2, 6, 7) = %f%n", trapezoidArea(2, 6, 7));
         System.out.printf("triangleArea(3.6, 9) = %f%n", triangleArea(3.6, 9));
-        System.out.printf("triangleArea(3.6, 4.9, 5.1) = %f%n", triangleArea(2.6, 3.9, 8.1));
+        System.out.printf("triangleArea(3.6, 4.9, 5.1) = %f%n", triangleArea(3.6, 4.9, 5.1));
     }
 }
