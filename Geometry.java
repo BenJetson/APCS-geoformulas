@@ -145,7 +145,7 @@ public class Geometry
      * @return The hypotenuse of the specified right triangle. 
      */
     public static double pythagorean(double a, double b) {
-        return Math.pow((Math.pow(a, 2) * Math.pow(b, 2)), (1.0 / 2.0));
+        return Math.pow((Math.pow(a, 2) + Math.pow(b, 2)), (1.0 / 2.0));
     }
     
     /**
