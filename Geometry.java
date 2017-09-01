@@ -34,7 +34,7 @@ public class Geometry
     public static double triangleArea(double a, double b, double c) {
         double s = (a + b + c) / 2.0;
         
-        return Math.pow((s * (s - a) * (s - b) * (s - c)), (1.0 / 2.0));
+        return Math.sqrt((s * (s - a) * (s - b) * (s - c)));
     }
     
     /** 
