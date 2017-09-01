@@ -34,7 +34,7 @@ public class Geometry
     public static double triangleArea(double a, double b, double c) {
         double s = (a + b + c) / 2.0;
         
-        return Math.pow((s * (s - a) * (s - b) * (s - c)), (1 / 2));
+        return Math.pow((s * (s - a) * (s - b) * (s - c)), (1.0 / 2.0));
     }
     
     /** 
@@ -90,11 +90,11 @@ public class Geometry
     /** 
      * Computes the volume of a rectangular prism, given the length, width, height.
      * 
-     * @param length The length of the prism, as a double. 
-     * @param width The width of the prism, as a double. 
-     * @param height The height of the prism, as a double. 
+     * @param length The length of the prism, as a double.
+     * @param width The width of the prism, as a double.
+     * @param height The height of the prism, as a double.
      * 
-     * @return The volume of the specified rectangular prism. 
+     * @return The volume of the specified rectangular prism.
      */
     public static double rectPrismVolume(double length, double width, double height) {
         return length * width * height; 
@@ -103,10 +103,10 @@ public class Geometry
     /**
      * Computes the volume of a cone, given the base radius and height.
      * 
-     * @param radius The radius of the base, as a double. 
-     * @param height The height of the cone, as a double. 
+     * @param radius The radius of the base, as a double.
+     * @param height The height of the cone, as a double.
      * 
-     * @return The volume of the specified cone. 
+     * @return The volume of the specified cone.
      */
     public static double coneVolume(double radius, double height) {
         return Math.PI * Math.pow(radius, 2) * (height / 3.0);
@@ -116,12 +116,12 @@ public class Geometry
      * Computes the surface area of a rectangular prism, given the length, width, and height.
      * 
      * @param length The length of the prism, as a double.
-     * @param width The length of the prism, as a double. 
-     * @param height The height of the prism, as a double. 
+     * @param width The length of the prism, as a double.
+     * @param height The height of the prism, as a double.
      * 
      * @return The surface area of the specified rectangular prism.
      */
-    public static double rectPrismSurfaceArea(double length, double width, double height) {
+    public static double rectPrismSA(double length, double width, double height) {
         return (2.0 * length * width) + (2.0 * length * height) + (2.0 * width * height);
     }
     
@@ -132,7 +132,7 @@ public class Geometry
      * 
      * @return The surface area of the specified sphere.
      */
-    public static double sphereSurfaceArea(double radius) {
+    public static double sphereSA(double radius) {
         return 4.0 * Math.PI * Math.pow(radius, 2);
     }
     
@@ -177,15 +177,21 @@ public class Geometry
         return (y1 - y2) / (x1 - x2);
     }
     
-    public static void main(String[] args) 
-    {
-        double ta1 = triangleArea(4.2, 8.1);
-        double ta2 = triangleArea(3.0, 123.157);
+    public static void main(String[] args) {
+       // BEGIN TESTING
         
-        System.out.println(ta1);
-        System.out.println(ta2);
-        
-        double ra1 = rectangleArea(5.2, 9.3);
-        System.out.println(ra1);
+        System.out.printf("coneVolume(5,2) = %f%n", coneVolume(5, 2));
+        System.out.printf("distance(5,16, 2, 11) = %f%n", distance(5,16, 2, 11));
+        System.out.printf("parallelogramArea(3,5) = %f%n", parallelogramArea(3,5));
+        System.out.printf("pythagorean(3,4) = %f%n", pythagorean(3,4));
+        System.out.printf("rectangleArea(8,6) = %f%n",rectangleArea(8,6));
+        System.out.printf("rectPrismSA(2,7,3) = %f%n", rectPrismSA(2,7,3));
+        System.out.printf("rectPrismVolume(5,4,9.5) = %f%n", rectPrismVolume(5,4,9.5));
+        System.out.printf("slope(-1,4,2,6) = %f%n", slope(-1,4,2,6)); 
+        System.out.printf("sphereSA(4) = %f%n", sphereSA(4));
+        System.out.printf("sphereVolume(8.5) = %f%n", sphereVolume(8.5));
+        System.out.printf("trapezoidArea(2, 6, 7) = %f%n", trapezoidArea(2, 6, 7));
+        System.out.printf("triangleArea(3.6, 9) = %f%n", triangleArea(3.6, 9));
+        System.out.printf("triangleArea(3.6, 4.9, 5.1) = %f%n", triangleArea(2.6, 3.9, 8.1));
     }
 }
